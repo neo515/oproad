@@ -56,7 +56,7 @@ rm '/etc/systemd/system/multi-user.target.wants/sshd.service'
 任务         | 旧指令                   | 新指令
 ---          | ---                      | ---
 列出服务     | chkconfig #7下也可用(sysV) | systemctl list-unit-files\|grep enabled
-树形列出     | >>                         | systemd-cgls    
+树形列出     | 　　                      | systemd-cgls    
 启动一个服务 | service postfix start  | systemctl start   postfix.service
 关闭一个服务 | service postfix stop   | systemctl stop    postfix.service
 重启一个服务 | service postfix restart| systemctl restart postfix.service
@@ -64,6 +64,6 @@ rm '/etc/systemd/system/multi-user.target.wants/sshd.service'
 不开机启动   | chkconfig --level 3 httpd off |systemctl disable httpd.service
 是否开机启动 | chkconfig --list postfix      |systemctl is-enabled postfix.service
 状态         | service httpd status          |systemctl status httpd.service （服务详细信息） 
-　　　       | >>                            |systemctl is-active httpd.service（仅显示是否 Active)
-当前服务状态(而非配置状态) | >>              | systemctl list-units --type=service
+　　　       | 　　　　                       |systemctl is-active httpd.service（仅显示是否 Active)
+当前服务状态(而非配置状态) |　　　　   　　      | systemctl list-units --type=service
 服务的配置状态             |chkconfig --list |systemctl list-unit-files --type=service\|grep enable
