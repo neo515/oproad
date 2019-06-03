@@ -64,6 +64,6 @@ rm '/etc/systemd/system/multi-user.target.wants/sshd.service'
 不开机启动   | chkconfig --level 3 httpd off |systemctl disable httpd.service
 是否开机启动 | chkconfig --list postfix      |systemctl is-enabled postfix.service
 状态         | service httpd status          |systemctl status httpd.service （服务详细信息） 
->>           | >>                            |systemctl is-active httpd.service（仅显示是否 Active)
+null>>           | >>                            |systemctl is-active httpd.service（仅显示是否 Active)
 当前服务状态(而非配置状态) | >>              | systemctl list-units --type=service
 服务的配置状态             |chkconfig --list |systemctl list-unit-files --type=service\|grep enable
