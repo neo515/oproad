@@ -1,0 +1,11 @@
+#### 反引号``、$()
+- $( )  不是所有shell都支持
+- \` `  基本上可用在全部的 unix shell 中使用,其移植性比较高。
+- 嵌套的`` 须要额外的跳脱(\\`)处理
+
+```bash
+command1 $(command2 $(command3))
+command1 `command2 `command3` `   #错误
+command1 `command2 \`command3\` ` #正确
+`echo \`echo \`echo ls\` \``  == ls
+```
