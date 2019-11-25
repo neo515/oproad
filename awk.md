@@ -1,5 +1,5 @@
-#### 书写格式
-```
+#### 书写格式 
+```bash
 1.  BEGIN  {  statements  }
 2.  END {  statements  }
 3.  expression  {  statements  }
